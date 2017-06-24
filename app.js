@@ -10,7 +10,7 @@ var users = require('./routes/users');
 
 var app = express();
 var cors= require('cors');
-var methodOverride= require('method-override')
+var methodOverride= require('method-override');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
