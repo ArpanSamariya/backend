@@ -7,23 +7,6 @@ const  db=require('monk')(URL);
 
 const docs=db.get('u');
 /* GET home page. */
-router.get('/welcom', function(req, res, next) {
- // res.render('index', { title: 'Express' });
-    docs.find({"id":"23456ty"}, function (err,docs) {
-        if(err) console.log(err);
-        else res.json(docs[0]);
-    } )
-});
-
-router.get('/well', function (req, res, next) {
-
-    docs.insert({"name": " ", "age": " "}, function (err, docs) {
-        if(err)
-            console.log(err);
-        else
-            res.send("succesful");
-    })
-});
 
 
 router.get('/welcomess', function(req, res, next) {
