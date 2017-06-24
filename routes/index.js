@@ -9,7 +9,9 @@ const docs=db.get('u')
 /* GET home page. */
 router.get('/welcom', function(req, res, next) {
  // res.render('index', { title: 'Express' });
-    docs.find({}, function (err,docs) {
+    docs.find({"_id": {
+        "$oid": "594914437bdf64f3ddc994d1"
+    }}, function (err,docs) {
         if(err) console.log(err)
         else res.json(docs[0]);
     } )
