@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-var URL="mongodb://abmnukmr:123456789@ds131782.mlab.com:31782/abmnu"
+var URL="mongodb://arpan:arpansam@ds133162.mlab.com:33162/bus"
 
 const  db=require('monk')(URL)
 
-const docs=db.get('abs')
+const docs=db.get('u')
 /* GET home page. */
 router.get('/welcom', function(req, res, next) {
  // res.render('index', { title: 'Express' });
@@ -21,7 +21,7 @@ router.get('/well', function (req, res, next) {
         if(err)
             console.log("error");
         else
-            res.send("clonning donne-souraV successful");
+            res.send("clonning donne-souraV ghjghjgjsuccesful");
     })
 });
 
