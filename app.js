@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var port = process.env.PORT || 5000;
 var cors= require('cors');
 var methodOverride= require('method-override');
 
