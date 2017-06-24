@@ -29,12 +29,6 @@ app.use(cors());
 app.use('/', index);
 app.use('/users', users);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
 /// cros
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -43,6 +37,14 @@ app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
    // res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
+});
+
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 // error handler
 app.use(function(err, req, res, next) {
