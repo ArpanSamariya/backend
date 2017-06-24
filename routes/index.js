@@ -26,7 +26,7 @@ router.get('/well', function (req, res, next) {
 });
 
 
-router.get('/wel', function(req, res, next) {
+router.get('/welcomess', function(req, res, next) {
     res.send('welcome to heroku ');
 });
 
